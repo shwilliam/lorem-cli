@@ -2,6 +2,7 @@
   "name": "@shwilliam/lorem-cli",
   "version": "0.1.0",
   "author": "William L <w-lindvall@outlook.com>",
+  "description": "Generate & copy 'lorem ipsum' text from your command line",
   "bin": {
     "lorem": "./bin/run"
   },
