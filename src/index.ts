@@ -1,29 +1,30 @@
-import {Command, flags} from '@oclif/command'
+import {Command} from '@oclif/command'
+import {lorem} from './lorem'
 
-class ShwilliamLoremCli extends Command {
-  static description = 'describe the command here'
+class LoremCli extends Command {
+  static description = 'generate placeholder text'
 
-  static flags = {
-    // add --version flag to show CLI version
-    version: flags.version({char: 'v'}),
-    help: flags.help({char: 'h'}),
-    // flag with a value (-n, --name=VALUE)
-    name: flags.string({char: 'n', description: 'name to print'}),
-    // flag with no value (-f, --force)
-    force: flags.boolean({char: 'f'}),
-  }
-
-  static args = [{name: 'file'}]
+  static args = [
+    {
+      name: 'paragraphs',
+      required: false,
+      description: 'number of paragraphs (150 max)',
+      default: 1,
+    },
+  ]
 
   async run() {
-    const {args, flags} = this.parse(ShwilliamLoremCli)
+    const {args} = this.parse(LoremCli)
 
-    const name = flags.name ?? 'world'
-    this.log(`hello ${name} from ./src/index.ts`)
-    if (args.file && flags.force) {
-      this.log(`you input --force and --file: ${args.file}`)
+    if (args.paragraphs > 150) {
+      console.log('that seems excessive')
+    } else {
+      const targetParagraphs = lorem.slice(0, args.paragraphs)
+      const textStr = targetParagraphs.join(`
+`)
+      console.log(textStr)
     }
   }
 }
 
-export = ShwilliamLoremCli
+export = LoremCli
