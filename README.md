@@ -1,12 +1,12 @@
 @shwilliam/lorem-cli
 ====================
 
-
-
 [![oclif](https://img.shields.io/badge/cli-oclif-brightgreen.svg)](https://oclif.io)
 [![Version](https://img.shields.io/npm/v/@shwilliam/lorem-cli.svg)](https://npmjs.org/package/@shwilliam/lorem-cli)
 [![Downloads/week](https://img.shields.io/npm/dw/@shwilliam/lorem-cli.svg)](https://npmjs.org/package/@shwilliam/lorem-cli)
 [![License](https://img.shields.io/npm/l/@shwilliam/lorem-cli.svg)](https://github.com/shwilliam/lorem-cli/blob/master/package.json)
+
+> Generate 'lorem ipsum' text from your command line
 
 <!-- toc -->
 * [Usage](#usage)
